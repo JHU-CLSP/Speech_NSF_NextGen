@@ -172,8 +172,8 @@ The [CHiME 8](https://www.chimechallenge.org/challenges/chime8/task1/index#track
 - [Usage](https://github.com/chimechallenge/chime-utils?tab=readme-ov-file#usage) prepares CHiME-8 data lhotse manifests.
 - [Manifest preparation for different toolkits](https://github.com/chimechallenge/chime-utils/blob/main/DATAPREP.md) (Datasets included: Dipco, mixer6, notsofar1, CHiME6).
 
-### 🎨 Target Speaker ASR with Whisper (by Dominik Klement, [Matthew Wiesner](https://m-wiesner.github.io/))
-The [repository](https://github.com/BUTSpeechFIT/TS-ASR-Whisper/tree/main) contains the official implementation of the following publications: [Target Speaker Whisper](https://arxiv.org/pdf/2409.09543) and [DiCoW](https://arxiv.org/pdf/2501.00114): Diarization-Conditioned Whisper for Target Speaker Automatic Speech Recognition. It relied on Lhotse for homogenizing the data preparation across various datasets, such as AMI, Librispeech.  
+### 🎨 Target Speaker ASR with Whisper (by [BUT](https://speech.fit.vut.cz/) in collaboration with Dominik Klement, [Matthew Wiesner](https://m-wiesner.github.io/))
+The [repository](https://github.com/BUTSpeechFIT/TS-ASR-Whisper/tree/main) contains the official implementation of the following publications: [Target Speaker Whisper](https://arxiv.org/pdf/2409.09543) and [DiCoW](https://arxiv.org/pdf/2501.00114): Diarization-Conditioned Whisper for Target Speaker Automatic Speech Recognition. It relied on Lhotse for homogenizing the data preparation across various datasets, such as AMI, Librispeech.  This project is a collaboration between  Alex Polok and Lukás Burget from [BUT](https://speech.fit.vut.cz/) and Dominik Klement, [Matthew Wiesner](https://m-wiesner.github.io/)
 - [Data preparation](https://github.com/BUTSpeechFIT/TS-ASR-Whisper/tree/main/scripts/data) (AMI, Librispeech, etc)
 
 
