@@ -156,6 +156,7 @@ K2 brings data structures and algorithms from the field of finite state automata
 - **\#2** Dan Povey, [214 commits](https://github.com/k2-fsa/k2/commits?author=danpovey) 🟩 73,771 ++ 🔴 30,586 --
 
 ### 🎨 k2 codes
+- Test whether FSA is [acyclic](https://github.com/k2-fsa/k2/pull/26). 
 - Fast parallel computation of longest common prefixes for eﬃcient pattern matching ([kmp-LCP](https://github.com/k2-fsa/k2/pull/804)).
 - Implementation of the Hybrid Autoregressive Transducer loss ([HAT](https://github.com/k2-fsa/k2/pull/1244)).
 
