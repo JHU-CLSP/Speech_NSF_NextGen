@@ -51,16 +51,16 @@ The primary objective of k2 is to re-implement all core functions of Kaldi nativ
 Lhotse develops a modern approach to speech data preparation. Its design is inspired by data libraries commonly used in the ML community, such as pandas. Lhotse's philosophy may be summarized as ''simple things should be simple, complex things should be possible.'' 
 
 ### 🎨 JHU Contributors
-- **\#1** Piotr Żelasko, [1,221 commits](https://github.com/lhotse-speech/lhotse/commits?author=pzelasko) 🟩 110,336 ++ 🔴 43,656 --
+- **\#1** Piotr Żelasko, [1,231 commits](https://github.com/lhotse-speech/lhotse/commits?author=pzelasko) 🟩 112,538 ++ 🔴 43,832 --
 - **\#2** Desh Raj, [248 commits](https://github.com/lhotse-speech/lhotse/commits?author=desh2608) 🟩 29,279 ++ 🔴 12,783 --
 - **\#4** Jan (Yenda) Trmal, [33 commits](https://github.com/lhotse-speech/lhotse/commits?author=jtrmal) 🟩 2,093 ++ 🔴 651 --
 - **\#6** Amir Hussein, [28 commits](https://github.com/lhotse-speech/lhotse/commits?author=AmirHussein96) 🟩 2,747 ++ 🔴 1766 --
 - **\#13** Matthew Wiesner, [13 commits](https://github.com/lhotse-speech/lhotse/commits?author=AmirHussein96) 🟩 3,425 ++ 🔴 627 --
-- **\#24** Yiming Wang, [7 commits](https://github.com/lhotse-speech/lhotse/commits?author=freewym) 🟩 215 ++ 🔴 37 --
-- **\#39** Dominik Klement, [2 commits](https://github.com/lhotse-speech/lhotse/commits?author=domklement) 🟩 1602 ++ 🔴 0 --
-- **\#53** Matthew Maciejewski, [1 commit](https://github.com/lhotse-speech/lhotse/commits?author=mmaciej2) 🟩 1,217 ++ 🔴 0 --
-- **\#74** Henry Li Xinyuan, [1 commit](https://github.com/lhotse-speech/lhotse/commits?author=HSTEHSTEHSTE) 🟩 146 ++ 🔴 0 --
+- **\#23** Yiming Wang, [7 commits](https://github.com/lhotse-speech/lhotse/commits?author=freewym) 🟩 215 ++ 🔴 37 --
+- **\#38** Dominik Klement, [2 commits](https://github.com/lhotse-speech/lhotse/commits?author=domklement) 🟩 1602 ++ 🔴 0 --
+- **\#56** Matthew Maciejewski, [1 commit](https://github.com/lhotse-speech/lhotse/commits?author=mmaciej2) 🟩 1,217 ++ 🔴 0 --
 - **\#76** Dongji Gao, [1 commit](https://github.com/lhotse-speech/lhotse/commits?author=DongjiGao) 🟩 5 ++ 🔴 3 --
+- **\#83** Henry Li Xinyuan, [1 commit](https://github.com/lhotse-speech/lhotse/commits?author=HSTEHSTEHSTE) 🟩 146 ++ 🔴 0 --
 
 ### 🎨 GPU-accelerated Guided Source Separation (by [Desh Raj](https://desh2608.github.io/))
 Improved implementation of [GSS](https://github.com/desh2608/gss) that leverages the power of modern GPU-based pipelines, such as batched processing of frequencies and segments. This allows us to perform detailed ablation studies over several parameters of the GSS algorithm. There are reproducible pipelines for speaker-attributed transcription of popular meeting benchmarks: LibriCSS, AMI, and AliMeeting.
