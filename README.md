@@ -111,6 +111,10 @@ Icefall is the project where K2 and Lhotse ''meet''. It provides the speech and 
 ### 🎨 External Contributors
 - **\#2** Dan Povey, [200 commits](https://github.com/k2-fsa/icefall/commits?author=danpovey) 🟩 13,323 ++ 🔴 4,485 --
 
+###  🎨 HENT-SRT (by [Amir Hussein](https://github.com/AmirHussein96), Paola Garcia, [Matthew Wiesner](https://m-wiesner.github.io/))
+We introduced [HENT-SRT](https://arxiv.org/pdf/2506.02157) (Hierarchical Efficient Neural Transducer for Speech Recognition and Translation
+), a novel hierarchical transducer architecture for joint speech recognition and translation (ST). HENT-SRT ([Icefall recipe](https://github.com/k2-fsa/icefall/tree/master/egs/multi_conv_zh_es_ta)) significantly outperforms previous state-ofthe-art transducer-based ST models and closes the gap with attention-based encoder-decoder architectures, while achieving superior ASR performance. Our approach offers substantial gains in streaming scenarios without introducing additional delays.
+
 ### 🎨 Continuous Streaming Multi-Talker ASR (by [Desh Raj](https://desh2608.github.io/))
 [We investigated](https://arxiv.org/abs/2109.08555) Streaming Unmixing and Recognition Transducer (SURT) for continuous streaming multitalker ASR, and demonstrated the effectiveness of dual-path LSTMs and Transformers for generalization to diverse session lengths (recipes for the [LibriCSS](https://github.com/k2-fsa/icefall/tree/master/egs/libricss/SURT), [AMI and ICSI](https://github.com/k2-fsa/icefall/tree/master/egs/ami/SURT) datasets).
 
