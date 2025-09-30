@@ -140,6 +140,7 @@ Created a multitask learning framework that synchronizes Language Identification
 - [Librispeech](https://github.com/k2-fsa/icefall/tree/e79833aad278f09792deceab5962b09ae4f56378/egs/librispeech) - partial contribution
 - [Fluent Speech Commands recipe](https://github.com/k2-fsa/icefall/tree/master/egs/fluent_speech_commands/SLU)
 - Recipe for [Geolocation](https://github.com/geolocation-from-speech/icefall/tree/geolocation/egs/radio/geolocation) dataset using Lhotse and Icefall
+- Dialectal IWSLT-Tunisian 2022 shared task ASR and ST [recipes](https://github.com/k2-fsa/icefall/tree/master/egs/iwslt22_ta)
 
 _______________________________________________________________________________________
 <p align="center">
