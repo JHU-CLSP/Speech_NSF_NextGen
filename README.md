@@ -101,12 +101,12 @@ ________________________________________________________________________________
 Icefall is the project where K2 and Lhotse ''meet''. It provides the speech and language research community a comprehensive collection of recipes for training modern speech processing systems on most of the popular speech data sets.  
 
 ### 🎨 JHU Contributors
-- **\#11** Piotr Żelasko, [18 commits](https://github.com/k2-fsa/icefall/commits?author=pzelasko) 🟩 993 ++ 🔴 838 --
+- **\#9** Desh Raj, [19 commits](https://github.com/k2-fsa/icefall/commits?author=desh2608) 🟩 39,142 ++ 🔴 22,339 --
+- **\#10** Piotr Żelasko, [18 commits](https://github.com/k2-fsa/icefall/commits?author=pzelasko) 🟩 993 ++ 🔴 838 --
 - **\#15** Ruizhe Huang, [7 commits](https://github.com/k2-fsa/icefall/commits?author=huangruizhe) 🟩 95 ++ 🔴 74 --
-- **\#38** Dongji Gao, [2 commits](https://github.com/k2-fsa/icefall/commits?author=DongjiGao) 🟩 9,565 ++ 🔴 9 --
-- **\#43** Henry Li Xinyuan, [1 commit](https://github.com/k2-fsa/icefall/commits?author=HSTEHSTEHSTE) 🟩 2,124 ++ 🔴 3 --
-- **\#67** Amir Hussein, [1 commit](https://github.com/k2-fsa/icefall/commits?author=AmirHussein96) 🟩 6,114 ++ 🔴 1 --
-- **\#100** Jan "yenda" Trmal, [1 commit](https://github.com/k2-fsa/icefall/commits?author=jtrmal) 🟩 1 ++ 🔴 1 --
+- **\#29** Amir Hussein, [3 commit](https://github.com/k2-fsa/icefall/commits?author=AmirHussein96) 🟩 59,348 ++ 🔴 2 --
+- **\#31** Dongji Gao, [2 commits](https://github.com/k2-fsa/icefall/commits?author=DongjiGao) 🟩 9,565 ++ 🔴 9 --
+- **\#44** Henry Li Xinyuan, [1 commit](https://github.com/k2-fsa/icefall/commits?author=HSTEHSTEHSTE) 🟩 2,124 ++ 🔴 3 --
 
 ### 🎨 External Contributors
 - **\#2** Dan Povey, [200 commits](https://github.com/k2-fsa/icefall/commits?author=danpovey) 🟩 13,323 ++ 🔴 4,485 --
