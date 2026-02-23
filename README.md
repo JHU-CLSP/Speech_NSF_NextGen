@@ -189,3 +189,8 @@ Ruizhe has introduced a long-form fuzzy speech-to-text aligner built on Torchaud
 Researchers and developers increasingly rely on the open-source platform Hugging Face for pre-trained models, datasets, and tools to efficiently build and deploy AI applications. [k2-fsa](https://huggingface.co/k2-fsa) is available on Hugging Face. As of now, it has published one dataset (LibriSpeech) and 18 models. Additionally, 30 HF Spaces have been released, offering inference APIs and demos for tasks such as speech recognition, text-to-speech, audio tagging, and spoken language identification using Next-gen Kaldi.
 
 # 🔹 Publications
+Dongji Gao, Chenda Liao, Changliang Liu, Matthew Wiesner, Leibny Paola Garcia, Daniel Povey, Sanjeev Khudanpur, Jian Wu. "WST: Weakly Supervised Transducer for Automatic Speech Recognition," IEEE Automatic Speech Recognition and Understanding Workshop, 2025.
+
+Ruizhe Huang, Mahsa Yarmohammadi, Sanjeev Khudanpur, Daniel Povey. "Improving Neural Biasing for Contextual Speech Recognition by Early Context Injection and Text Perturbation," Interspeech, 2024.
+
+...
