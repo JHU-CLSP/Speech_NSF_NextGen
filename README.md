@@ -56,15 +56,6 @@
      With advances in deep learning, the performance of end-to-end single-task models for speech and audio processing has been constantly improving. However, it is challenging to build a general-purpose model with high performance on multiple tasks, since different speech and audio processing tasks usually require different training data, input features, or model architectures to achieve optimal performance. In this work, MT2KD, a novel two-stage multi-task learning framework is proposed to build a general-purpose speech and audio encoder that jointly performs three fundamental tasks: automatic speech recognition (ASR), audio tagging (AT) and speaker verification (SV). In the first stage, multi-teacher knowledge distillation (KD) is applied to align the feature spaces of three single-task high-performance teacher encoders into a single student encoder using the same unlabelled data. In the second stage, multi-task supervised fine-tuning is carried out by initialising the model from the first stage and training on the separate labelled data of each single task. Experiments demonstrate that the proposed multi-task training pipeline significantly outperforms a baseline model trained with multi-task learning from scratch. The final system achieves good performance on ASR, AT and SV: with less than 4% relative word-error-rate increase on ASR, only 1.9 lower mean averaged precision on AT and 0.23% absolute higher equal error rate on SV compared to the best-performing single-task encoders, using only a total of 66 M model parameters.
   </details>
 
-- **HENT-SRT: Hierarchical Efficient Neural Transducer with Self-Distillation for Joint Speech Recognition and Translation**
-   Amir Hussein, Cihan Xiao, Matthew Wiesner, Dan Povey, Leibny Paola García, S. Khudanpur
-   International Workshop on Spoken Language Translation 2025
-   [open paper page](https://api.semanticscholar.org/CorpusId:279119264)
-   <details>
-     <summary> Abstract </summary>
-     Neural transducers (NT) provide an effective framework for speech streaming, demonstrating strong performance in automatic speech recognition (ASR). However, the application of NT to speech translation (ST) remains challenging, as existing approaches struggle with word reordering and performance degradation when jointly modeling ASR and ST, resulting in a gap with attention-based encoder-decoder (AED) models. Existing NT-based ST approaches also suffer from high computational training costs. To address these issues, we propose HENT-SRT (Hierarchical Efficient Neural Transducer for Speech Recognition and Translation), a novel framework that factorizes ASR and translation tasks to better handle reordering. To ensure robust ST while preserving ASR performance, we use self-distillation with CTC consistency regularization. Moreover, we improve computational efficiency by incorporating best practices from ASR transducers, including a down-sampled hierarchical encoder, a stateless predictor, and a pruned transducer loss to reduce training complexity. Finally, we introduce a blank penalty during decoding, reducing deletions and improving translation quality. Our approach is evaluated on three conversational datasets Arabic, Spanish, and Mandarin achieving new state-of-the-art performance among NT models and substantially narrowing the gap with AED-based systems.
-  </details>
-
 - **Libriheavy: A 50,000 Hours ASR Corpus with Punctuation Casing and Context**
    Wei Kang, Xiaoyu Yang, Zengwei Yao, Fangjun Kuang, Yifan Yang, Liyong Guo, Long Lin, Daniel Povey
    IEEE International Conference on Acoustics, Speech, and Signal Processing 2023
@@ -90,15 +81,6 @@
    <details>
      <summary> Abstract </summary>
      Self-supervised learning (SSL) based discrete speech representations are highly compact and domain adaptable. In this paper, SSL discrete speech features extracted from WavLM models are used as additional cross-utterance acoustic context features in Zipformer-Transducer ASR systems. The efficacy of replacing Fbank features with discrete token features for modelling either cross-utterance contexts (from preceding and future segments), or current utterance's internal contexts alone, or both at the same time, are demonstrated thoroughly on the Gigaspeech 1000-hr corpus. The best Zipformer-Transducer system using discrete tokens based cross-utterance context features outperforms the baseline using utterance internal context only with statistically significant word error rate (WER) reductions of 0.32% to 0.41% absolute (2.78% to 3.54% relative) on the dev and test data. The lowest published WER of 11.15% and 11.14% were obtained on the dev and test sets. Our work is open-source and publicly available at https://github.com/open-creator/icefall/tree/master/egs/gigaspeech/Context\_ASR.
-  </details>
-
-- **End-to-End Target Speaker Speech Recognition Using Context-Aware Attention Mechanisms for Challenging Enrollment Scenario**
-   Mohsen Ghane, Mohammad Sadegh Safari
-   IEEE Signal Processing Letters 2025
-   [open paper page](https://api.semanticscholar.org/CorpusId:275920841)
-   <details>
-     <summary> Abstract </summary>
-     This paper presents a novel streaming end-to-end target-speaker speech recognition that addresses two critical limitations in systems: the handling of noisy enrollment utterances and specific enrollment phrase requirements. This paper proposes a robust Target-Speaker Recurrent Neural Network Transducer (TS-RNNT) with dual attention mechanisms for contextual biasing and overlapping enrollment processing. The model incorporates a text decoder and attention mechanism specifically designed to extract relevant speaker characteristics from noisy, overlapping enrollment audio. Experimental results on a synthesized dataset demonstrate the model's resilience, maintaining a Word Error Rate (WER) of 17.3% for unseen enrollments, even under severe overlapping speech conditions at $ -\text{5 dB}$ Signal-to-Interference Ratio (SIR). In contrast, conventional approaches suffer a significant performance drop, with WERs exceeding 75% under similar conditions. This significant performance improvement, coupled with the model's semi-text-dependent enrollment capabilities, represents a substantial advancement toward more practical and versatile voice-controlled devices.
   </details>
 
 - **Unifying Streaming and Non-streaming Zipformer-based ASR**
@@ -261,15 +243,6 @@
    <details>
      <summary> Abstract </summary>
      In this paper, we focus on solving one of the most important tasks in the field of speech processing, i.e., automatic speech recognition (ASR), with speech foundation encoders and large language models (LLM). Recent works have complex designs such as compressing the output temporally for the speech encoder, tackling modal alignment for the projector, and utilizing parameter-efficient fine-tuning for the LLM. We found that delicate designs are not necessary, while an embarrassingly simple composition of off-the-shelf speech encoder, LLM, and the only trainable linear projector is competent for the ASR task. To be more specific, we benchmark and explore various combinations of LLMs and speech encoders, leading to the optimal LLM-based ASR system, which we call SLAM-ASR. The proposed SLAM-ASR provides a clean setup and little task-specific design, where only the linear projector is trained. To the best of our knowledge, SLAM-ASR achieves the best performance on the Librispeech benchmark among LLM-based ASR models and even outperforms the latest LLM-based audio-universal model trained on massive pair data. Finally, we explore the capability emergence of LLM-based ASR in the process of modal alignment. We hope that our study can facilitate the research on extending LLM with cross-modality capacity and shed light on the LLM-based ASR community.
-  </details>
-
-- **Lhotse: a speech data representation library for the modern deep learning ecosystem**
-   Piotr Żelasko, Daniel Povey, J. Trmal, S. Khudanpur
-   arXiv.org 2021
-   [open paper page](https://arxiv.org/pdf/2110.12561.pdf)
-   <details>
-     <summary> Abstract </summary>
-     Speech data is notoriously difficult to work with due to a variety of codecs, lengths of recordings, and meta-data formats. We present Lhotse, a speech data representation library that draws upon lessons learned from Kaldi speech recognition toolkit and brings its concepts into the modern deep learning ecosystem. Lhotse provides a common JSON description format with corresponding Python classes and data preparation recipes for over 30 popular speech corpora. Various datasets can be easily combined together and re-purposed for different tasks. The library handles multi-channel recordings, long recordings, local and cloud storage, lazy and on-the-fly operations amongst other features. We introduce Cut and CutSet concepts, which simplify common data wrangling tasks for audio and help incorporate acoustic context of speech utterances. Finally, we show how Lhotse leverages PyTorch data API abstractions and adopts them to handle speech data for deep learning.
   </details>
 
 - **Splitformer: An Improved Early-Exit Architecture for Automatic Speech Recognition on Edge Devices**
