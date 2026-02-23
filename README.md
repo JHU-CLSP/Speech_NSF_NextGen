@@ -191,14 +191,6 @@
      In this study, we investigate the integration of a large language model (LLM) with an automatic speech recognition (ASR) system, specifically focusing on enhancing rare word recognition performance. Using a 190,000-hour dataset primarily sourced from YouTube, pre-processed with Whisper V3 pseudo-labeling, we demonstrate that the LLM-ASR architecture outperforms traditional Zipformer-Transducer models in the zero-shot rare word recognition task, after training on a large dataset. Our analysis reveals that the LLM contributes significantly to improvements in rare word error rate (R-WER), while the speech encoder primarily determines overall transcription performance (Orthographic Word Error Rate, O-WER, and Normalized Word Error Rate, N-WER). Through extensive ablation studies, we highlight the importance of adapter integration in aligning speech encoder outputs with the LLM's linguistic capabilities. Furthermore, we emphasize the critical role of high-quality labeled data in achieving optimal performance. These findings provide valuable insights into the synergy between LLM-based ASR architectures, paving the way for future advancements in large-scale LLM-based speech recognition systems.
   </details>
 
-- **Phoneme-Aware Hierarchical Augmentation and Semantic-Aware SpecAugment for Low-Resource Cantonese Speech Recognition**
-   Lusheng Zhang, Shie Wu, Zhongxun Wang
-   Italian National Conference on Sensors 2025
-   [open paper page](https://api.semanticscholar.org/CorpusId:280206293)
-   <details>
-     <summary> Abstract </summary>
-     Cantonese Automatic Speech Recognition (ASR) is hindered by tonal complexity, acoustic diversity, and a lack of labelled data. This study proposes a phoneme-aware hierarchical augmentation framework that enhances performance without additional annotation. A Phoneme Substitution Matrix (PSM), built from Montreal Forced Aligner alignments and Tacotron-2 synthesis, injects adversarial phoneme variants into both transcripts and their aligned audio segments, enlarging pronunciation diversity. Concurrently, a semantic-aware SpecAugment scheme exploits wav2vec 2.0 attention heat maps and keyword boundaries to adaptively mask informative time–frequency regions; a reinforcement-learning controller tunes the masking schedule online, forcing the model to rely on a wider context. On the Common Voice Cantonese 50 h subset, the combined strategy reduces the character error rate (CER) from 26.17% to 16.88% with wav2vec 2.0 and from 38.83% to 23.55% with Zipformer. At 100 h, the CER further drops to 4.27% and 2.32%, yielding relative gains of 32–44%. Ablation studies confirm that phoneme-level and masking components provide complementary benefits. The framework offers a practical, model-independent path toward accurate ASR for Cantonese and other low-resource tonal languages. This paper presents an intelligent sensing-oriented modeling framework for speech signals, which is suitable for deployment on edge or embedded systems to process input from audio sensors (e.g., microphones) and shows promising potential for voice-interactive terminal applications.
-  </details>
 
 - **Leveraging Zipformer Model for Effective Language Identification in Code-Switched Child-Directed Speech**
    Lavanya Shankar, Leibny Paola Garcia Perera
@@ -234,51 +226,6 @@
    <details>
      <summary> Abstract </summary>
      In contrast to other sequence tasks modeling hidden layer features with three axes, Dual-Path time and time-frequency domain speech enhancement models are effective and have low parameters but are computationally demanding due to their hidden layer features with four axes. We propose ZipEnhancer, which is Dual-Path Down-Up Sampling-based Zipformer for Monaural Speech Enhancement, incorporating time and frequency domain Down-Up sampling to reduce computational costs. We introduce the ZipformerBlock as the core block and propose the design of the Dual-Path DownSampleStacks that symmetrically scale down and scale up. Also, we introduce the ScaleAdam optimizer and Eden learning rate scheduler to improve the performance further. Our model achieves new state-of-the-art results on the DNS 2020 Challenge and Voicebank+DEMAND datasets, with a perceptual evaluation of speech quality (PESQ) of 3.69 and 3.63, using 2.04M parameters and 62.41G FLOPS, outperforming other methods with similar complexity levels.
-  </details>
-
-- **An Embarrassingly Simple Approach for LLM with Strong ASR Capacity**
-   Ziyang Ma, Yifan Yang, Yifan Yang, Zhifu Gao, Jiaming Wang, Zhihao Du, Fan Yu, Qian Chen, Siqi Zheng, Shiliang Zhang, Xie Chen
-   arXiv.org 2024
-   [open paper page](https://api.semanticscholar.org/CorpusId:267657710)
-   <details>
-     <summary> Abstract </summary>
-     In this paper, we focus on solving one of the most important tasks in the field of speech processing, i.e., automatic speech recognition (ASR), with speech foundation encoders and large language models (LLM). Recent works have complex designs such as compressing the output temporally for the speech encoder, tackling modal alignment for the projector, and utilizing parameter-efficient fine-tuning for the LLM. We found that delicate designs are not necessary, while an embarrassingly simple composition of off-the-shelf speech encoder, LLM, and the only trainable linear projector is competent for the ASR task. To be more specific, we benchmark and explore various combinations of LLMs and speech encoders, leading to the optimal LLM-based ASR system, which we call SLAM-ASR. The proposed SLAM-ASR provides a clean setup and little task-specific design, where only the linear projector is trained. To the best of our knowledge, SLAM-ASR achieves the best performance on the Librispeech benchmark among LLM-based ASR models and even outperforms the latest LLM-based audio-universal model trained on massive pair data. Finally, we explore the capability emergence of LLM-based ASR in the process of modal alignment. We hope that our study can facilitate the research on extending LLM with cross-modality capacity and shed light on the LLM-based ASR community.
-  </details>
-
-- **Splitformer: An Improved Early-Exit Architecture for Automatic Speech Recognition on Edge Devices**
-   Maxence Lasbordes, Daniele Falavigna, A. Brutti
-   European Signal Processing Conference 2025
-   [open paper page](https://api.semanticscholar.org/CorpusId:279999522)
-   <details>
-     <summary> Abstract </summary>
-     The ability to dynamically adjust the computational load of neural models during inference in a resource aware manner is crucial for on-device processing scenarios, characterised by limited and time-varying computational resources. Early-exit architectures represent an elegant and effective solution, since they can process the input with a subset of their layers, exiting at intermediate branches (the upmost layers are hence removed from the model). From a different perspective, for automatic speech recognition applications there are memory-efficient neural architectures that apply variable frame rate analysis, through downsampling/upsampling operations in the middle layers, reducing the overall number of operations and improving significantly the performance on well established benchmarks. One example is the Zipformer. However, these architectures lack the modularity necessary to inject early-exit branches. With the aim of improving the performance in early-exit models, we propose introducing parallel layers in the architecture that process downsampled versions of their inputs. We show that in this way the speech recognition performance on standard benchmarks significantly improve, at the cost of a small increase in the overall number of model parameters but without affecting the inference time.
-  </details>
-
-- **ALADAN at IWSLT24 Low-resource Arabic Dialectal Speech Translation Task**
-   Waad Ben Kheder, Josef Jon, André Beyer, Abdelkhalek Messaoudi, Rabea Affan, Claude Barras, Maxim Tychonov, J. Gauvain
-   International Workshop on Spoken Language Translation 2024
-   [open paper page](https://api.semanticscholar.org/CorpusId:271769453)
-   <details>
-     <summary> Abstract </summary>
-     This paper presents ALADAN’s approach to the IWSLT 2024 Dialectal and Low-resource shared task, focusing on Levantine Arabic (apc) and Tunisian Arabic (aeb) to English speech translation (ST). Addressing challenges such as the lack of standardized orthography and limited training data, we propose a solution for data normalization in Dialectal Arabic, employing a modified Levenshtein distance and Word2vec models to find orthographic variants of the same word. Our system consists of a cascade ST system integrating two ASR systems (TDNN-F and Zipformer) and two NMT modules derived from pre-trained models (NLLB-200 1.3B distilled model and CohereAI’s Command-R). Additionally, we explore the integration of unsupervised textual and audio data, highlighting the importance of multi-dialectal datasets for both ASR and NMT tasks. Our system achieves BLEU score of 31.5 for Levantine Arabic on the official validation set.
-  </details>
-
-- **A study on phonemes recognition method for Mandarin pronunciation based on improved Zipformer-RNN-T(Pruned) modeling**
-   Zhaohui Du, Xiaofeng Zhao, Lin Li, Baohua Yu, Li Miao
-   PLoS ONE 2025
-   [open paper page](https://api.semanticscholar.org/CorpusId:278859165)
-   <details>
-     <summary> Abstract </summary>
-     In recent years, empowered by artificial intelligence technologies, computer-assisted language learning systems have gradually become a hot topic of research. Currently, the mainstream pronunciation assessment models rely on advanced speech recognition technology, converting speech into phoneme sequences, and then determining mispronounced phonemes through sequence comparison. To optimize the phoneme recognition task in pronunciation evaluation, this paper proposes a Chinese pronunciation phoneme recognition model based on the improved Zipformer-RNN-T(Pruned) architecture, aiming to improve recognition accuracy and reduce parameter count. First, the AISHELL1-PHONEME and ST-CMDS-PHONEME datasets for Mandarin phoneme recognition through data preprocessing. Then, three layers of the Zipformer Block architecture are introduced into the Zipformer encoder to significantly enhance model performance. In the stateless Pred Network, the GELU activation function is adopted to effectively prevent neuron deactivation. Furthermore, a hybrid Pruned RNN-T/CTC Loss fusion strategy is proposed, further optimizing recognition performance. The experimental results demonstrate that the method performs excellently in the phoneme recognition task, achieving a Word Error Rate (WER) of 1.92% (Dev) and 2.12% (Test) on the AISHELL1-PHONEME dataset, and 4.28% (Dev) and 4.51% (Test) on the ST-CMDS-PHONEME dataset. Moreover, the model requires only 61.1M parameters, striking a balance between performance and efficiency.
-  </details>
-
-- **Findings of the 2024 Mandarin Stuttering Event Detection and Automatic Speech Recognition Challenge**
-   Hongfei Xue, Rong Gong, Mingchen Shao, Xin Xu, Lezhi Wang, Lei Xie, Hui Bu, Jiaming Zhou, Yong Qin, Jun Du, Ming Li, Binbin Zhang, B. Jia
-   Spoken Language Technology Workshop 2024
-   [open paper page](https://api.semanticscholar.org/CorpusId:272524924)
-   <details>
-     <summary> Abstract </summary>
-     The StutteringSpeech Challenge focuses on advancing speech technologies for people who stutter, specifically targeting Stuttering Event Detection (SED) and Automatic Speech Recognition (ASR) in Mandarin. The challenge comprises three tracks: (1) SED, which aims to develop systems for detection of stuttering events; (2) ASR, which focuses on creating robust systems for recognizing stuttered speech; and (3) Research track for innovative approaches utilizing the provided dataset. We utilizes an open-source Mandarin stuttering dataset AS-70, which has been split into new training and test sets for the challenge. This paper presents the dataset, details the challenge tracks, and analyzes the performance of the top systems, highlighting improvements in detection accuracy and reductions in recognition error rates. Our findings underscore the potential of specialized models and augmentation strategies in developing stuttered speech technologies.
   </details>
 
 - **Weakly Supervised Data Refinement and Flexible Sequence Compression for Efficient Thai LLM-based ASR**
