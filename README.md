@@ -234,32 +234,7 @@ Researchers and developers increasingly rely on the open-source platform Hugging
      The vast majority of ASR research uses corpora in which both the training and test data have been pre-segmented into utterances. In most real-word ASR use-cases, however, test audio is not segmented, leading to a mismatch between inference-time conditions and models trained on segmented utterances. In this paper, we re-release three standard ASR corpora - TED-LIUM 3, Gigapeech, and VoxPopuli-en - with updated transcription and alignments to enable their use for long-form ASR research. We use these reconstituted corpora to study the train-test mismatch problem for transducers and attention-based encoder-decoders (AEDs), confirming that AEDs are more susceptible to this issue. Finally, we benchmark a simple long-form training for these models, showing its efficacy for model robustness under this domain shift.
   </details>
 
-- **Bypass Temporal Classification: Weakly Supervised Automatic Speech Recognition with Imperfect Transcripts**
-   Dongji Gao, Matthew Wiesner, Hainan Xu, Leibny Paola García, Daniel Povey, S. Khudanpur
-   Interspeech 2023
-   [open paper page](https://arxiv.org/pdf/2306.01031.pdf)
-   <details>
-     <summary> Abstract </summary>
-     This paper presents a novel algorithm for building an automatic speech recognition (ASR) model with imperfect training data. Imperfectly transcribed speech is a prevalent issue in human-annotated speech corpora, which degrades the performance of ASR models. To address this problem, we propose Bypass Temporal Classification (BTC) as an expansion of the Connectionist Temporal Classification (CTC) criterion. BTC explicitly encodes the uncertainties associated with transcripts during training. This is accomplished by enhancing the flexibility of the training graph, which is implemented as a weighted finite-state transducer (WFST) composition. The proposed algorithm improves the robustness and accuracy of ASR systems, particularly when working with imprecisely transcribed speech corpora. Our implementation will be open-sourced.
-  </details>
 
-- **Learning From Flawed Data: Weakly Supervised Automatic Speech Recognition**
-   Dongji Gao, Hainan Xu, Desh Raj, Leibny Paola Garcia Perera, Daniel Povey, S. Khudanpur
-   Automatic Speech Recognition & Understanding 2023
-   [open paper page](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10389684)
-   <details>
-     <summary> Abstract </summary>
-     Training automatic speech recognition (ASR) systems requires large amounts of well-curated paired data. However, human annotators usually perform “non-verbatim” transcription, which can result in poorly trained models. In this paper, we propose Omni-temporal Classification (OTC), a novel training criterion that explicitly incorporates label uncertainties originating from such weak supervision. This allows the model to effectively learn speech-text alignments while accommodating errors present in the training transcripts. OTC extends the conventional CTC objective for imperfect transcripts by leveraging weighted finite state transducers. Through experiments conducted on the LibriSpeech and LibriVox datasets, we demonstrate that training ASR models with OTC avoids performance degradation even with transcripts containing up to 70% errors, a scenario where CTC models fail completely. Our implementation is available at https://github.com/k2-fsa/icefall.
-  </details>
-- **Building Keyword Search System from End-To-End Asr Systems**
-   Ruizhe Huang, Matthew Wiesner, Leibny Paola García-Perera, Daniel Povey, J. Trmal, S. Khudanpur
-   IEEE International Conference on Acoustics, Speech, and Signal Processing 2023
-   [open paper page](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10097249)
-   <details>
-     <summary> Abstract </summary>
-     Keyword search (KWS) systems are commonly built on top of existing automatic speech recognition (ASR) systems. However, end-to-end (E2E) ASR models are not naturally equipped with word-level timing information or confidence. Existing methods for re-purposing E2E ASR systems for KWS are largely heuristic or model-specific. In this paper, we describe a general KWS pipeline, applicable to any ASR model that generates N-best lists. We extract timing information using either external word-aligners, or time-preserving weighted finite-state transducer-based decoders. We show that our light-weight, ASR-agnostic approach for confidence estimation based on N-best lists outperforms other commonly used heuristics, such as using the decoder’s softmax probability, and even a more complicated dedicated confidence estimation model (CEM). Finally, we compare our performance to hybrid ASR models, extensively evaluating the impact of word-level timing, confidence, and recall on KWS performance. Our KWS pipeline is available online1, suitable for evaluating the aforementioned ASR components as downstream tasks.
-     
-  </details>
 - **ConEC: Earnings Call Dataset with Real-world Contexts for Benchmarking Contextual Speech Recognition**
    Ruizhe Huang, M. Yarmohammadi, J. Trmal, Jing Liu, Desh Raj, Leibny Paola García, A. Ivanov, Patrick Ehlen, Mingzhi Yu, Dan Povey, S. Khudanpur
    International Conference on Language Resources and Evaluation 2024
@@ -278,6 +253,60 @@ Researchers and developers increasingly rely on the open-source platform Hugging
      In multilingual environments, seamless language switching, including code-switching (CS) within utterances, is essential for real-time applications. Conventional Automatic Speech Recognition (ASR) combined with language diarization requires post-processing to synchronize language labels with recognized words accurately, presenting a considerable challenge. In this study, we introduce a multitask learning framework that synchronizes Language Identification (LID) with ASR, utilizing a neural transducer architecture. This auxiliary task integrates both acoustic and lexical features to perform LID. Furthermore, we use resulting language representation as an auxiliary input to improve ASR. We demonstrate the efficacy of our proposed approach on conversational multilingual (Arabic, Spanish, Mandarin) and CS (Spanish-English, Mandarin-English) test sets.
   </details>
 
+- **On Speaker Attribution with SURT**
+   Desh Raj, Matthew Wiesner, Matthew Maciejewski, Leibny Paola García-Perera, Daniel Povey, S. Khudanpur
+   The Speaker and Language Recognition Workshop 2024
+   [open paper page](https://arxiv.org/pdf/2401.15676.pdf)
+   <details>
+     <summary> Abstract </summary>
+     The Streaming Unmixing and Recognition Transducer (SURT) has recently become a popular framework for continuous, streaming, multi-talker speech recognition (ASR). With advances in architecture, objectives, and mixture simulation methods, it was demonstrated that SURT can be an efficient streaming method for speaker-agnostic transcription of real meetings. In this work, we push this framework further by proposing methods to perform speaker-attributed transcription with SURT, for both short mixtures and long recordings. We achieve this by adding an auxiliary speaker branch to SURT, and synchronizing its label prediction with ASR token prediction through HAT-style blank factorization. In order to ensure consistency in relative speaker labels across different utterance groups in a recording, we propose"speaker prefixing"-- appending each chunk with high-confidence frames of speakers identified in previous chunks, to establish the relative order. We perform extensive ablation experiments on synthetic LibriSpeech mixtures to validate our design choices, and demonstrate the efficacy of our final model on the AMI corpus.
+  </details>
+
+- **Training Early-Exit Architectures for Automatic Speech Recognition: Fine-Tuning Pre-Trained Models or Training from Scratch**
+   G. Wright, Umberto Cappellazzo, Salah Zaiem, Desh Raj, Lucas Ondel Yang, Daniele Falavigna, Mohamed Nabih Ali, A. Brutti
+   2024 IEEE International Conference on Acoustics, Speech, and Signal Processing Workshops (ICASSPW)
+   [open paper page](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10627008)
+   <details>
+     <summary> Abstract </summary>
+     The ability to dynamically adjust the computational load of neural models during inference is crucial for on-device processing scenarios characterised by limited and time-varying computational resources. A promising solution is presented by early-exit architectures, in which additional exit branches are appended to intermediate layers of the encoder. In self-attention models for automatic speech recognition (ASR), early-exit architectures enable the development of dynamic models capable of adapting their size and architecture to varying levels of computational resources and ASR performance demands. Previous research on early-exiting ASR models has relied on pre-trained self-supervised models, fine-tuned with an early-exit loss. In this paper, we undertake an experimental comparison between fine-tuning pre-trained backbones and training models from scratch with the early-exiting objective. Experiments conducted on public datasets reveal that early-exit models trained from scratch not only preserve performance when using fewer encoder layers but also exhibit enhanced task accuracy compared to single-exit or pre-trained models. Furthermore, we explore an exit selection strategy grounded in posterior probabilities as an alternative to the conventional frame-based entropy approach. Results provide insights into the training dynamics of early-exit architectures for ASR models, particularly the efficacy of training strategies and exit selection methods.
+  </details>
+
+- **Bypass Temporal Classification: Weakly Supervised Automatic Speech Recognition with Imperfect Transcripts**
+   Dongji Gao, Matthew Wiesner, Hainan Xu, Leibny Paola García, Daniel Povey, S. Khudanpur
+   Interspeech 2023
+   [open paper page](https://arxiv.org/pdf/2306.01031.pdf)
+   <details>
+     <summary> Abstract </summary>
+     This paper presents a novel algorithm for building an automatic speech recognition (ASR) model with imperfect training data. Imperfectly transcribed speech is a prevalent issue in human-annotated speech corpora, which degrades the performance of ASR models. To address this problem, we propose Bypass Temporal Classification (BTC) as an expansion of the Connectionist Temporal Classification (CTC) criterion. BTC explicitly encodes the uncertainties associated with transcripts during training. This is accomplished by enhancing the flexibility of the training graph, which is implemented as a weighted finite-state transducer (WFST) composition. The proposed algorithm improves the robustness and accuracy of ASR systems, particularly when working with imprecisely transcribed speech corpora. Our implementation will be open-sourced.
+  </details>
+
+- **Learning From Flawed Data: Weakly Supervised Automatic Speech Recognition**
+   Dongji Gao, Hainan Xu, Desh Raj, Leibny Paola Garcia Perera, Daniel Povey, S. Khudanpur
+   Automatic Speech Recognition & Understanding 2023
+   [open paper page](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10389684)
+   <details>
+     <summary> Abstract </summary>
+     Training automatic speech recognition (ASR) systems requires large amounts of well-curated paired data. However, human annotators usually perform “non-verbatim” transcription, which can result in poorly trained models. In this paper, we propose Omni-temporal Classification (OTC), a novel training criterion that explicitly incorporates label uncertainties originating from such weak supervision. This allows the model to effectively learn speech-text alignments while accommodating errors present in the training transcripts. OTC extends the conventional CTC objective for imperfect transcripts by leveraging weighted finite state transducers. Through experiments conducted on the LibriSpeech and LibriVox datasets, we demonstrate that training ASR models with OTC avoids performance degradation even with transcripts containing up to 70% errors, a scenario where CTC models fail completely. Our implementation is available at https://github.com/k2-fsa/icefall.
+  </details>
+
+
+- **SURT 2.0: Advances in Transducer-Based Multi-Talker Speech Recognition**
+   Desh Raj, Daniel Povey, S. Khudanpur
+   IEEE/ACM Transactions on Audio Speech and Language Processing 2023
+   [open paper page](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10262308)
+   <details>
+     <summary> Abstract </summary>
+     The Streaming Unmixing and Recognition Transducer (SURT) model was proposed recently as an end-to-end approach for continuous, streaming, multi-talker speech recognition (ASR). Despite impressive results on multi-turn meetings, SURT has notable limitations: (i) it suffers from leakage and omission related errors; (ii) it is computationally expensive, due to which it has not seen adoption in academia; and (iii) it has only been evaluated on synthetic mixtures. In this work, we propose several modifications to the original SURT which are carefully designed to fix the above limitations. In particular, we (i) change the unmixing module to a mask estimator that uses dual-path modeling, (ii) use a streaming zipformer encoder and a stateless decoder for the transducer, (iii) perform mixture simulation using force-aligned subsegments, (iv) pre-train the transducer on single-speaker data, (v) use auxiliary objectives in the form of masking loss and encoder CTC loss, and (vi) perform domain adaptation for far-field recognition. We show that our modifications allow SURT 2.0 to outperform its predecessor in terms of multi-talker ASR results, while being efficient enough to train with academic resources. We conduct our evaluations on 3 publicly available meeting benchmarks — LibriCSS, AMI, and ICSI, where our best model achieves WERs of 16.9%, 44.6% and 32.2%, respectively, on far-field unsegmented recordings.
+  </details>
+- **Building Keyword Search System from End-To-End Asr Systems**
+   Ruizhe Huang, Matthew Wiesner, Leibny Paola García-Perera, Daniel Povey, J. Trmal, S. Khudanpur
+   IEEE International Conference on Acoustics, Speech, and Signal Processing 2023
+   [open paper page](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10097249)
+   <details>
+     <summary> Abstract </summary>
+     Keyword search (KWS) systems are commonly built on top of existing automatic speech recognition (ASR) systems. However, end-to-end (E2E) ASR models are not naturally equipped with word-level timing information or confidence. Existing methods for re-purposing E2E ASR systems for KWS are largely heuristic or model-specific. In this paper, we describe a general KWS pipeline, applicable to any ASR model that generates N-best lists. We extract timing information using either external word-aligners, or time-preserving weighted finite-state transducer-based decoders. We show that our light-weight, ASR-agnostic approach for confidence estimation based on N-best lists outperforms other commonly used heuristics, such as using the decoder’s softmax probability, and even a more complicated dedicated confidence estimation model (CEM). Finally, we compare our performance to hybrid ASR models, extensively evaluating the impact of word-level timing, confidence, and recall on KWS performance. Our KWS pipeline is available online1, suitable for evaluating the aforementioned ASR components as downstream tasks.
+     
+  </details>
 - **JHU IWSLT 2023 Dialect Speech Translation System Description**
    A. Hussein, Cihan Xiao, Neha Verma, Thomas Thebaud, Matthew Wiesner, S. Khudanpur
    International Workshop on Spoken Language Translation 2023
@@ -313,31 +342,3 @@ Researchers and developers increasingly rely on the open-source platform Hugging
     <summary> Abstract </summary>
     While deep learning has lead to dramatic improvements in automatic speech recognition (ASR) systems in the past few years, it has also made them vulnerable to adversarial attacks. These attacks may be designed to either make ASR fail in producing the correct transcription or worse, output an adversary-chosen sentence. In this work, we propose a defense based on independently processing random or fixed size chunks of the speech input in the hope of "containing” the cumulative effect of the adversarial perturbations. This approach does not require any additional training of the ASR system, or any defensive preprocessing of the input. It can be easily applied to any ASR systems with little loss in performance under benign conditions, while improving adversarial robustness. We perform experiments on the Librispeech data set with different adversarial attack budgets, and show that the proposed defense achieves consistent improvement on two different ASR systems/models.
   </details>
-
-- **SURT 2.0: Advances in Transducer-Based Multi-Talker Speech Recognition**
-   Desh Raj, Daniel Povey, S. Khudanpur
-   IEEE/ACM Transactions on Audio Speech and Language Processing 2023
-   [open paper page](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10262308)
-   <details>
-     <summary> Abstract </summary>
-     The Streaming Unmixing and Recognition Transducer (SURT) model was proposed recently as an end-to-end approach for continuous, streaming, multi-talker speech recognition (ASR). Despite impressive results on multi-turn meetings, SURT has notable limitations: (i) it suffers from leakage and omission related errors; (ii) it is computationally expensive, due to which it has not seen adoption in academia; and (iii) it has only been evaluated on synthetic mixtures. In this work, we propose several modifications to the original SURT which are carefully designed to fix the above limitations. In particular, we (i) change the unmixing module to a mask estimator that uses dual-path modeling, (ii) use a streaming zipformer encoder and a stateless decoder for the transducer, (iii) perform mixture simulation using force-aligned subsegments, (iv) pre-train the transducer on single-speaker data, (v) use auxiliary objectives in the form of masking loss and encoder CTC loss, and (vi) perform domain adaptation for far-field recognition. We show that our modifications allow SURT 2.0 to outperform its predecessor in terms of multi-talker ASR results, while being efficient enough to train with academic resources. We conduct our evaluations on 3 publicly available meeting benchmarks — LibriCSS, AMI, and ICSI, where our best model achieves WERs of 16.9%, 44.6% and 32.2%, respectively, on far-field unsegmented recordings.
-  </details>
-
-- **On Speaker Attribution with SURT**
-   Desh Raj, Matthew Wiesner, Matthew Maciejewski, Leibny Paola García-Perera, Daniel Povey, S. Khudanpur
-   The Speaker and Language Recognition Workshop 2024
-   [open paper page](https://arxiv.org/pdf/2401.15676.pdf)
-   <details>
-     <summary> Abstract </summary>
-     The Streaming Unmixing and Recognition Transducer (SURT) has recently become a popular framework for continuous, streaming, multi-talker speech recognition (ASR). With advances in architecture, objectives, and mixture simulation methods, it was demonstrated that SURT can be an efficient streaming method for speaker-agnostic transcription of real meetings. In this work, we push this framework further by proposing methods to perform speaker-attributed transcription with SURT, for both short mixtures and long recordings. We achieve this by adding an auxiliary speaker branch to SURT, and synchronizing its label prediction with ASR token prediction through HAT-style blank factorization. In order to ensure consistency in relative speaker labels across different utterance groups in a recording, we propose"speaker prefixing"-- appending each chunk with high-confidence frames of speakers identified in previous chunks, to establish the relative order. We perform extensive ablation experiments on synthetic LibriSpeech mixtures to validate our design choices, and demonstrate the efficacy of our final model on the AMI corpus.
-  </details>
-
-- **Training Early-Exit Architectures for Automatic Speech Recognition: Fine-Tuning Pre-Trained Models or Training from Scratch**
-   G. Wright, Umberto Cappellazzo, Salah Zaiem, Desh Raj, Lucas Ondel Yang, Daniele Falavigna, Mohamed Nabih Ali, A. Brutti
-   2024 IEEE International Conference on Acoustics, Speech, and Signal Processing Workshops (ICASSPW) 2023
-   [open paper page](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10627008)
-   <details>
-     <summary> Abstract </summary>
-     The ability to dynamically adjust the computational load of neural models during inference is crucial for on-device processing scenarios characterised by limited and time-varying computational resources. A promising solution is presented by early-exit architectures, in which additional exit branches are appended to intermediate layers of the encoder. In self-attention models for automatic speech recognition (ASR), early-exit architectures enable the development of dynamic models capable of adapting their size and architecture to varying levels of computational resources and ASR performance demands. Previous research on early-exiting ASR models has relied on pre-trained self-supervised models, fine-tuned with an early-exit loss. In this paper, we undertake an experimental comparison between fine-tuning pre-trained backbones and training models from scratch with the early-exiting objective. Experiments conducted on public datasets reveal that early-exit models trained from scratch not only preserve performance when using fewer encoder layers but also exhibit enhanced task accuracy compared to single-exit or pre-trained models. Furthermore, we explore an exit selection strategy grounded in posterior probabilities as an alternative to the conventional frame-based entropy approach. Results provide insights into the training dynamics of early-exit architectures for ASR models, particularly the efficacy of training strategies and exit selection methods.
-  </details>
-
