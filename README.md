@@ -189,8 +189,20 @@ Ruizhe has introduced a long-form fuzzy speech-to-text aligner built on Torchaud
 Researchers and developers increasingly rely on the open-source platform Hugging Face for pre-trained models, datasets, and tools to efficiently build and deploy AI applications. [k2-fsa](https://huggingface.co/k2-fsa) is available on Hugging Face. As of now, it has published one dataset (LibriSpeech) and 18 models. Additionally, 30 HF Spaces have been released, offering inference APIs and demos for tasks such as speech recognition, text-to-speech, audio tagging, and spoken language identification using Next-gen Kaldi.
 
 # 🔹 Publications
-Dongji Gao, Chenda Liao, Changliang Liu, Matthew Wiesner, Leibny Paola Garcia, Daniel Povey, Sanjeev Khudanpur, Jian Wu. "WST: Weakly Supervised Transducer for Automatic Speech Recognition," IEEE Automatic Speech Recognition and Understanding Workshop, 2025.
-
-Ruizhe Huang, Mahsa Yarmohammadi, Sanjeev Khudanpur, Daniel Povey. "Improving Neural Biasing for Contextual Speech Recognition by Early Context Injection and Text Perturbation," Interspeech, 2024.
-
-...
+- **WST: Weakly Supervised Transducer for Automatic Speech Recognition**
+   Dongji Gao, Chenda Liao, Changliang Liu, Matthew Wiesner, Leibny Paola García, Dan Povey, S. Khudanpur, Jian Wu
+   arXiv.org 2025
+   [open paper page](https://arxiv.org/pdf/2511.04035.pdf)
+   <details>
+     <summary> Abstract </summary>
+     The Recurrent Neural Network-Transducer (RNN-T) is widely adopted in end-to-end (E2E) automatic speech recognition (ASR) tasks but depends heavily on large-scale, high-quality annotated data, which are often costly and difficult to obtain. To mitigate this reliance, we propose a Weakly Supervised Transducer (WST), which integrates a flexible training graph designed to robustly handle errors in the transcripts without requiring additional confidence estimation or auxiliary pre-trained models. Empirical evaluations on synthetic and industrial datasets reveal that WST effectively maintains performance even with transcription error rates of up to 70%, consistently outperforming existing Connectionist Temporal Classification (CTC)-based weakly supervised approaches, such as Bypass Temporal Classification (BTC) and Omni-Temporal Classification (OTC). These results demonstrate the practical utility and robustness of WST in realistic ASR settings. The implementation will be publicly available.
+  </details>
+  
+- **Listening to Multi-talker Conversations: Modular and End-to-end Perspectives**
+   Desh Raj
+   arXiv.org 2024
+   [open paper page](https://arxiv.org/pdf/2402.08932.pdf)
+   <details>
+     <summary> Abstract </summary>
+     Since the first speech recognition systems were built more than 30 years ago, improvement in voice technology has enabled applications such as smart assistants and automated customer support. However, conversation intelligence of the future requires recognizing free-flowing multi-party conversations, which is a crucial and challenging component that still remains unsolved. In this dissertation, we focus on this problem of speaker-attributed multi-talker speech recognition, and propose two perspectives which result from its probabilistic formulation. In the modular perspective, we build a pipeline of sub-tasks involving speaker diarization, target speaker extraction, and speech recognition. Our first contribution is a method to perform overlap-aware diarization by reformulating spectral clustering as a constrained optimization problem. We also describe an algorithm to ensemble diarization outputs, either to combine overlap-aware systems or to perform multi-channel diarization by late fusion. Once speaker segments are identified, we robustly extract single-speaker utterances from the mixture using a GPU-accelerated implementation of guided source separation, which allows us to use an off-the-shelf ASR system to obtain speaker-attributed transcripts. Since the modular approach suffers from error propagation, we propose an alternate"end-to-end"perspective on the problem. For this, we describe the Streaming Unmixing and Recognition Transducer (SURT). We show how to train SURT models efficiently by carefully designing the network architecture, objective functions, and mixture simulation techniques. Finally, we add an auxiliary speaker branch to enable joint prediction of speaker labels synchronized with the speech tokens. We demonstrate that training on synthetic mixtures and adapting with real data helps these models transfer well for streaming transcription of real meeting sessions.
+  </details>
