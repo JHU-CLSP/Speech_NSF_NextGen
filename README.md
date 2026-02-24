@@ -233,3 +233,30 @@ Researchers and developers increasingly rely on the open-source platform Hugging
      <summary> Abstract </summary>
      The vast majority of ASR research uses corpora in which both the training and test data have been pre-segmented into utterances. In most real-word ASR use-cases, however, test audio is not segmented, leading to a mismatch between inference-time conditions and models trained on segmented utterances. In this paper, we re-release three standard ASR corpora - TED-LIUM 3, Gigapeech, and VoxPopuli-en - with updated transcription and alignments to enable their use for long-form ASR research. We use these reconstituted corpora to study the train-test mismatch problem for transducers and attention-based encoder-decoders (AEDs), confirming that AEDs are more susceptible to this issue. Finally, we benchmark a simple long-form training for these models, showing its efficacy for model robustness under this domain shift.
   </details>
+
+- **Bypass Temporal Classification: Weakly Supervised Automatic Speech Recognition with Imperfect Transcripts**
+   Dongji Gao, Matthew Wiesner, Hainan Xu, Leibny Paola García, Daniel Povey, S. Khudanpur
+   Interspeech 2023
+   [open paper page](https://arxiv.org/pdf/2306.01031.pdf)
+   <details>
+     <summary> Abstract </summary>
+     This paper presents a novel algorithm for building an automatic speech recognition (ASR) model with imperfect training data. Imperfectly transcribed speech is a prevalent issue in human-annotated speech corpora, which degrades the performance of ASR models. To address this problem, we propose Bypass Temporal Classification (BTC) as an expansion of the Connectionist Temporal Classification (CTC) criterion. BTC explicitly encodes the uncertainties associated with transcripts during training. This is accomplished by enhancing the flexibility of the training graph, which is implemented as a weighted finite-state transducer (WFST) composition. The proposed algorithm improves the robustness and accuracy of ASR systems, particularly when working with imprecisely transcribed speech corpora. Our implementation will be open-sourced.
+  </details>
+
+- **Learning From Flawed Data: Weakly Supervised Automatic Speech Recognition**
+   Dongji Gao, Hainan Xu, Desh Raj, Leibny Paola Garcia Perera, Daniel Povey, S. Khudanpur
+   Automatic Speech Recognition & Understanding 2023
+   [open paper page](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10389684)
+   <details>
+     <summary> Abstract </summary>
+     Training automatic speech recognition (ASR) systems requires large amounts of well-curated paired data. However, human annotators usually perform “non-verbatim” transcription, which can result in poorly trained models. In this paper, we propose Omni-temporal Classification (OTC), a novel training criterion that explicitly incorporates label uncertainties originating from such weak supervision. This allows the model to effectively learn speech-text alignments while accommodating errors present in the training transcripts. OTC extends the conventional CTC objective for imperfect transcripts by leveraging weighted finite state transducers. Through experiments conducted on the LibriSpeech and LibriVox datasets, we demonstrate that training ASR models with OTC avoids performance degradation even with transcripts containing up to 70% errors, a scenario where CTC models fail completely. Our implementation is available at https://github.com/k2-fsa/icefall.
+  </details>
+- **Building Keyword Search System from End-To-End Asr Systems**
+   Ruizhe Huang, Matthew Wiesner, Leibny Paola García-Perera, Daniel Povey, J. Trmal, S. Khudanpur
+   IEEE International Conference on Acoustics, Speech, and Signal Processing 2023
+   [open paper page](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10097249)
+   <details>
+     <summary> Abstract </summary>
+     Keyword search (KWS) systems are commonly built on top of existing automatic speech recognition (ASR) systems. However, end-to-end (E2E) ASR models are not naturally equipped with word-level timing information or confidence. Existing methods for re-purposing E2E ASR systems for KWS are largely heuristic or model-specific. In this paper, we describe a general KWS pipeline, applicable to any ASR model that generates N-best lists. We extract timing information using either external word-aligners, or time-preserving weighted finite-state transducer-based decoders. We show that our light-weight, ASR-agnostic approach for confidence estimation based on N-best lists outperforms other commonly used heuristics, such as using the decoder’s softmax probability, and even a more complicated dedicated confidence estimation model (CEM). Finally, we compare our performance to hybrid ASR models, extensively evaluating the impact of word-level timing, confidence, and recall on KWS performance. Our KWS pipeline is available online1, suitable for evaluating the aforementioned ASR components as downstream tasks.
+     
+  </details>
