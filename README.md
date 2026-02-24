@@ -206,3 +206,30 @@ Researchers and developers increasingly rely on the open-source platform Hugging
      <summary> Abstract </summary>
      Since the first speech recognition systems were built more than 30 years ago, improvement in voice technology has enabled applications such as smart assistants and automated customer support. However, conversation intelligence of the future requires recognizing free-flowing multi-party conversations, which is a crucial and challenging component that still remains unsolved. In this dissertation, we focus on this problem of speaker-attributed multi-talker speech recognition, and propose two perspectives which result from its probabilistic formulation. In the modular perspective, we build a pipeline of sub-tasks involving speaker diarization, target speaker extraction, and speech recognition. Our first contribution is a method to perform overlap-aware diarization by reformulating spectral clustering as a constrained optimization problem. We also describe an algorithm to ensemble diarization outputs, either to combine overlap-aware systems or to perform multi-channel diarization by late fusion. Once speaker segments are identified, we robustly extract single-speaker utterances from the mixture using a GPU-accelerated implementation of guided source separation, which allows us to use an off-the-shelf ASR system to obtain speaker-attributed transcripts. Since the modular approach suffers from error propagation, we propose an alternate"end-to-end"perspective on the problem. For this, we describe the Streaming Unmixing and Recognition Transducer (SURT). We show how to train SURT models efficiently by carefully designing the network architecture, objective functions, and mixture simulation techniques. Finally, we add an auxiliary speaker branch to enable joint prediction of speaker labels synchronized with the speech tokens. We demonstrate that training on synthetic mixtures and adapting with real data helps these models transfer well for streaming transcription of real meeting sessions.
   </details>
+
+- **Improving Neural Biasing for Contextual Speech Recognition by Early Context Injection and Text Perturbation**
+   Ruizhe Huang, M. Yarmohammadi, S. Khudanpur, Dan Povey
+   Interspeech 2024
+   [open paper page](https://arxiv.org/pdf/2407.10303.pdf)
+   <details>
+     <summary> Abstract </summary>
+     Existing research suggests that automatic speech recognition (ASR) models can benefit from additional contexts (e.g., contact lists, user specified vocabulary). Rare words and named entities can be better recognized with contexts. In this work, we propose two simple yet effective techniques to improve context-aware ASR models. First, we inject contexts into the encoders at an early stage instead of merely at their last layers. Second, to enforce the model to leverage the contexts during training, we perturb the reference transcription with alternative spellings so that the model learns to rely on the contexts to make correct predictions. On LibriSpeech, our techniques together reduce the rare word error rate by 60% and 25% relatively compared to no biasing and shallow fusion, making the new state-of-the-art performance. On SPGISpeech and a real-world dataset ConEC, our techniques also yield good improvements over the baselines.
+  </details>
+  
+- **Where are you from? Geolocating Speech and Applications to Language Identification**
+   P. Foley, Matthew Wiesner, B. Odoom, Leibny Paola Garcia Perera, Kenton Murray, Philipp Koehn
+   North American Chapter of the Association for Computational Linguistics 2024
+   [open paper page](https://www.aclanthology.org/2024.naacl-long.286.pdf)
+   <details>
+     <summary> Abstract </summary>
+     We train models to answer the question, Where are you from? and show how such models can be repurposed for language identification (LID). To our knowledge, this paper is the first to introduce data sources, methods and models to tackle the task of geolocation of speech at a global scale, and the first to explore using geolocation as a proxy-task for LID. Specifically, we explore whether radio broadcasts with known origin can be used to train regression and classification-based models for geolocating speech. We build models on top of self-supervised pretrained models, using attention pooling to qualitatively verify that the model geolocates the speech itself, and not other channel artifacts.The best geolocation models localize speaker origin to around 650km. We confirm the value of speech geolocation as a proxy task by using speech geolocation models for zero-shot LID. Finally, we show that fine-tuning geolocation models for LID outperforms fine-tuning pretrained Wav2Vec2.0 models, and achieves state-of-the-art performance on the FLEURS benchmark.
+  </details>
+
+- **Updated corpora and benchmarks for long-form speech recognition**
+   Jennifer Drexler Fox, D. Raj, N. Delworth, Q. McNamara, C. Miller, M. Jetté
+   IEEE ICASSP 2024
+   [open paper page](https://arxiv.org/pdf/2309.15013)
+   <details>
+     <summary> Abstract </summary>
+     The vast majority of ASR research uses corpora in which both the training and test data have been pre-segmented into utterances. In most real-word ASR use-cases, however, test audio is not segmented, leading to a mismatch between inference-time conditions and models trained on segmented utterances. In this paper, we re-release three standard ASR corpora - TED-LIUM 3, Gigapeech, and VoxPopuli-en - with updated transcription and alignments to enable their use for long-form ASR research. We use these reconstituted corpora to study the train-test mismatch problem for transducers and attention-based encoder-decoders (AEDs), confirming that AEDs are more susceptible to this issue. Finally, we benchmark a simple long-form training for these models, showing its efficacy for model robustness under this domain shift.
+  </details>
