@@ -17,7 +17,29 @@ The primary objective of k2 is to re-implement all core functions of Kaldi nativ
 
 <div align="center">
 
-  GitHub statistics for Lhotse, Icefall, and k2. <sup>*</sup>within last month (as of September 30 2025)
+GitHub statistics for Lhotse, Icefall, and k2. <sup>*</sup>September 1–24, 2026 (as of September 24, 2026)
+
+| GitHub statistic | Lhotse | Icefall | k2 |
+|------------------|-------:|--------:|---:|
+| Watch | 41 | 51 | 69 |
+| Fork | 281 | 431 | 241 |
+| Star | 1,154 | 1,507 | 1,363 |
+| Dependent repositories | 474 | 0 | 63 |
+| Merged PR<sup>*</sup> | 9 | 0 | 0 |
+| Open PR<sup>*</sup> | 2 | 0 | 0 |
+| Closed issue<sup>*</sup> | 0 | 2 | 1 |
+| New issue<sup>*</sup> | 3 | 1 | 1 |
+| Commits to master<sup>*</sup> | 11 | 0 | 0 |
+| Additions<sup>*</sup> | 2,741 | 0 | 0 |
+| Deletions<sup>*</sup> | 229 | 0 | 0 |
+
+</div>
+
+
+
+<div align="center">
+
+ GitHub statistics for Lhotse, Icefall, and k2 as of Sept 30, 2025 <sup>*</sup>September 1–30, 2025
 
 | GitHub statistic        | Lhotse | Icefall | k2   |
 |-------------------------|--------|---------|------|
