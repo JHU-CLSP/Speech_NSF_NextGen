@@ -80,7 +80,7 @@ Lhotse develops a modern approach to speech data preparation. Its design is insp
 - **\#6** Amir Hussein, [28 commits](https://github.com/lhotse-speech/lhotse/commits?author=AmirHussein96) 🟩 2,747 ++ 🔴 1766 --
 - **\#13** Matthew Wiesner, [13 commits](https://github.com/lhotse-speech/lhotse/commits?author=AmirHussein96) 🟩 3,425 ++ 🔴 627 --
 - **\#23** Yiming Wang, [7 commits](https://github.com/lhotse-speech/lhotse/commits?author=freewym) 🟩 215 ++ 🔴 37 --
--  Alex Polok, [5 commits](https://github.com/lhotse-speech/lhotse/commits?author=Lakoc) 🟩 1,485 ++ 🔴 155 --
+- **\#28** Alex Polok, [5 commits](https://github.com/lhotse-speech/lhotse/commits?author=Lakoc) 🟩 1,485 ++ 🔴 155 --
 - **\#38** Dominik Klement, [4 commits](https://github.com/lhotse-speech/lhotse/commits?author=domklement) 🟩 1602 ++ 🔴 0 --
 - **\#56** Matthew Maciejewski, [1 commit](https://github.com/lhotse-speech/lhotse/commits?author=mmaciej2) 🟩 1,217 ++ 🔴 0 --
 - **\#76** Dongji Gao, [1 commit](https://github.com/lhotse-speech/lhotse/commits?author=DongjiGao) 🟩 5 ++ 🔴 3 --
