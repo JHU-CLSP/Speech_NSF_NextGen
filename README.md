@@ -89,6 +89,8 @@ Lhotse develops a modern approach to speech data preparation. Its design is insp
 ### 🎨 GPU-accelerated Guided Source Separation (by [Desh Raj](https://desh2608.github.io/))
 Improved implementation of [GSS](https://github.com/desh2608/gss) that leverages the power of modern GPU-based pipelines, such as batched processing of frequencies and segments. This allows us to perform detailed ablation studies over several parameters of the GSS algorithm. There are reproducible pipelines for speaker-attributed transcription of popular meeting benchmarks: LibriCSS, AMI, and AliMeeting.
 
+### 🎨 FAST-CAP: Simultaneous Speech-to-Speech Translation (by [Amir Hussein](https://github.com/AmirHussein96))
+We developed [FAST-CAP](https://github.com/AmirHussein96/FAST-CAP), a framework for translating speech while a person is still speaking. It includes a pipeline for generating causally aligned training data, a speech-to-speech model, and an adaptive policy that determines when to produce translated speech. The repository provides scripts for training and streaming evaluation, including measures of translation quality, speaker similarity, and latency.
 
 
 ### 🎨 Lhotse recipes
