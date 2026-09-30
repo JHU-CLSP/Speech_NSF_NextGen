@@ -226,6 +226,42 @@ Ruizhe has introduced a long-form fuzzy speech-to-text aligner built on Torchaud
 Researchers and developers increasingly rely on the open-source platform Hugging Face for pre-trained models, datasets, and tools to efficiently build and deploy AI applications. [k2-fsa](https://huggingface.co/k2-fsa) is available on Hugging Face. As of now, it has published one dataset (LibriSpeech) and 18 models. Additionally, 30 HF Spaces have been released, offering inference APIs and demos for tasks such as speech recognition, text-to-speech, audio tagging, and spoken language identification using Next-gen Kaldi.
 
 # 🔹 Publications
+
+- **Modeling Overlapped Speech with Shuffles**  
+  Matthew Wiesner, Samuele Cornell, Alexander Polok, Lucas Ondel-Yang, Lukáš Burget, Sanjeev Khudanpur  
+  Interspeech 2026  
+  [open paper page](https://www.isca-archive.org/interspeech_2026/wiesner26_interspeech.html)  
+  <details>
+    <summary>Abstract</summary>
+    We model overlapping speech using shuffle operations and partial-order finite-state automata. The approach accounts for multiple valid orders of speech from different speakers during training and supports speaker-attributed transcription and alignment in a single pass. Experiments on synthetic LibriSpeech overlaps demonstrate the method, which is implemented using k2 and Icefall.
+  </details>
+
+- **All In Good Time: Causality-Aware Framework for LLM-Based Simultaneous Speech-to-Speech Translation**  
+  Amir Hussein, Enas Albasiri, Travis M. Bartley, Nourchene Ferchichi, Ke Hu, Harishchandra Dubey, Myungjong Kim, Zhehuai Chen, Oluwatobi Olabiyi, Sanjeev Khudanpur  
+  arXiv.org 2026  
+  [open paper page](https://arxiv.org/abs/2609.30416)  
+  <details>
+    <summary>Abstract</summary>
+    Simultaneous speech-to-speech translation requires a system to produce translated speech before the source speaker has finished. FAST-CAP combines causally aligned training data, a factorized translation architecture, and an adaptive policy for deciding when to translate. Experiments in Spanish, German, and French report improvements in translation quality, speaker fidelity, and latency.
+  </details>
+
+- **Pandemonium: Longform Target-Speaker Speech Recognition with Cross-Speaker Interactions**  
+  Alexander Polok, Dominik Klement, Ivan Medennikov, Antoine Laurent, Petr Pálka, Samuele Cornell, Shinji Watanabe, Sanjeev Khudanpur, Jagadeesh Balam, Jan Černocký, Lukáš Burget, Matthew Wiesner  
+  Submitted to ICASSP, 2026  
+  <details>
+    <summary>Abstract</summary>
+    Pandemonium extends diarization-conditioned target-speaker ASR to long recordings using a Parakeet-based model. Cross-speaker attention allows the model to use interactions among speakers, while a mask refiner improves the diarization cues used for recognition. Training also draws on 5,400 hours of pseudo-labeled multi-speaker audio. The authors report strong results on meeting transcription benchmarks and release the models and data.
+  </details>
+
+- **BUT System Description for CHiME-9 MCoRec Challenge**  
+  Dominik Klement, Alexander Polok, Nguyen Hai Phong, Prachi Singh, Lukáš Burget  
+  CHiME 2026  
+  [open paper page](https://www.isca-archive.org/chime_2026/klement26_chime.html)  
+  <details>
+    <summary>Abstract</summary>
+    The BUT system addresses transcription of heavily overlapping audio-visual conversations and clustering of participants into conversational groups. It combines a long-context, target-speaker ASR model based on Parakeet-v2 and AV-HuBERT with transcript-based conversation clustering. On the MCoRec development set, the system achieved 33.7% word error rate and a clustering F1 score of 0.97; the team ranked second on the evaluation set.
+  </details>
+
 - **WST: Weakly Supervised Transducer for Automatic Speech Recognition**
    Dongji Gao, Chenda Liao, Changliang Liu, Matthew Wiesner, Leibny Paola García, Dan Povey, S. Khudanpur, Jian Wu
    arXiv.org 2025
