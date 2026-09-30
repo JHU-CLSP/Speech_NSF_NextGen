@@ -227,6 +227,14 @@ Researchers and developers increasingly rely on the open-source platform Hugging
 
 # 🔹 Publications
 
+- **Pandemonium: Longform Target-Speaker Speech Recognition with Cross-Speaker Interactions**  
+  Alexander Polok, Dominik Klement, Ivan Medennikov, Antoine Laurent, Petr Pálka, Samuele Cornell, Shinji Watanabe, Sanjeev Khudanpur, Jagadeesh Balam, Jan Černocký, Lukáš Burget, Matthew Wiesner  
+  Submitted to ICASSP, 2027  
+  <details>
+    <summary>Abstract</summary>
+    Pandemonium extends diarization-conditioned target-speaker ASR to long recordings using a Parakeet-based model. Cross-speaker attention allows the model to use interactions among speakers, while a mask refiner improves the diarization cues used for recognition. Training also draws on 5,400 hours of pseudo-labeled multi-speaker audio. The authors report strong results on meeting transcription benchmarks and release the models and data.
+  </details>
+
 - **Modeling Overlapped Speech with Shuffles**  
   Matthew Wiesner, Samuele Cornell, Alexander Polok, Lucas Ondel-Yang, Lukáš Burget, Sanjeev Khudanpur  
   Interspeech 2026  
@@ -243,14 +251,6 @@ Researchers and developers increasingly rely on the open-source platform Hugging
   <details>
     <summary>Abstract</summary>
     Simultaneous speech-to-speech translation requires a system to produce translated speech before the source speaker has finished. FAST-CAP combines causally aligned training data, a factorized translation architecture, and an adaptive policy for deciding when to translate. Experiments in Spanish, German, and French report improvements in translation quality, speaker fidelity, and latency.
-  </details>
-
-- **Pandemonium: Longform Target-Speaker Speech Recognition with Cross-Speaker Interactions**  
-  Alexander Polok, Dominik Klement, Ivan Medennikov, Antoine Laurent, Petr Pálka, Samuele Cornell, Shinji Watanabe, Sanjeev Khudanpur, Jagadeesh Balam, Jan Černocký, Lukáš Burget, Matthew Wiesner  
-  Submitted to ICASSP, 2026  
-  <details>
-    <summary>Abstract</summary>
-    Pandemonium extends diarization-conditioned target-speaker ASR to long recordings using a Parakeet-based model. Cross-speaker attention allows the model to use interactions among speakers, while a mask refiner improves the diarization cues used for recognition. Training also draws on 5,400 hours of pseudo-labeled multi-speaker audio. The authors report strong results on meeting transcription benchmarks and release the models and data.
   </details>
 
 - **BUT System Description for CHiME-9 MCoRec Challenge**  
