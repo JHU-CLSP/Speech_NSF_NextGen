@@ -137,7 +137,7 @@ Icefall is the project where K2 and Lhotse ''meet''. It provides the speech and 
 - **\#2** Dan Povey, [200 commits](https://github.com/k2-fsa/icefall/commits?author=danpovey) 🟩 13,323 ++ 🔴 4,485 --
 
 ###  🎨 Multi-Talker Speech Recognition with Shuffle CTC (by [Matthew Wiesner](https://m-wiesner.github.io/))
-We developed a multi-talker ASR recipe, [Shuffle CTC for multi-talker ASR],(https://github.com/m-wiesner/icefall/tree/feature/shuffle-ctc-recipe/egs/librispeech/MTASR) in Icefall using shuffle CTC. It supports LibriSpeech data preparation, WavLM-based training, decoding, and word alignment for speaker-attributed and token-only models. We also extracted a reusable shuffle CTC loss to help researchers develop further multi-talker systems.
+We developed a multi-talker ASR recipe, [Shuffle CTC for multi-talker ASR](https://github.com/m-wiesner/icefall/tree/feature/shuffle-ctc-recipe/egs/librispeech/MTASR), in Icefall using shuffle CTC. It supports LibriSpeech data preparation, WavLM-based training, decoding, and word alignment for speaker-attributed and token-only models. We also extracted a reusable shuffle CTC loss to help researchers develop further multi-talker systems.
 
 ###  🎨 HENT-SRT (by [Amir Hussein](https://github.com/AmirHussein96), Paola Garcia, [Matthew Wiesner](https://m-wiesner.github.io/))
 We introduced [HENT-SRT](https://arxiv.org/pdf/2506.02157) (Hierarchical Efficient Neural Transducer for Speech Recognition and Translation
