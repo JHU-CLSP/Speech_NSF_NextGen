@@ -74,13 +74,14 @@ GitHub statistics for Lhotse, Icefall, and k2. <sup>*</sup>September 1–24, 202
 Lhotse develops a modern approach to speech data preparation. Its design is inspired by data libraries commonly used in the ML community, such as pandas. Lhotse's philosophy may be summarized as ''simple things should be simple, complex things should be possible.'' 
 
 ### 🎨 JHU Contributors
-- **\#1** Piotr Żelasko, [1,231 commits](https://github.com/lhotse-speech/lhotse/commits?author=pzelasko) 🟩 112,538 ++ 🔴 43,832 --
+- **\#1** Piotr Żelasko, [1,261 commits](https://github.com/lhotse-speech/lhotse/commits?author=pzelasko) 🟩 112,538 ++ 🔴 43,832 --
 - **\#2** Desh Raj, [248 commits](https://github.com/lhotse-speech/lhotse/commits?author=desh2608) 🟩 29,279 ++ 🔴 12,783 --
 - **\#4** Jan (Yenda) Trmal, [33 commits](https://github.com/lhotse-speech/lhotse/commits?author=jtrmal) 🟩 2,093 ++ 🔴 651 --
 - **\#6** Amir Hussein, [28 commits](https://github.com/lhotse-speech/lhotse/commits?author=AmirHussein96) 🟩 2,747 ++ 🔴 1766 --
 - **\#13** Matthew Wiesner, [13 commits](https://github.com/lhotse-speech/lhotse/commits?author=AmirHussein96) 🟩 3,425 ++ 🔴 627 --
 - **\#23** Yiming Wang, [7 commits](https://github.com/lhotse-speech/lhotse/commits?author=freewym) 🟩 215 ++ 🔴 37 --
-- **\#38** Dominik Klement, [2 commits](https://github.com/lhotse-speech/lhotse/commits?author=domklement) 🟩 1602 ++ 🔴 0 --
+-  Alex Polok, [5 commits](https://github.com/lhotse-speech/lhotse/commits?author=Lakoc) 🟩 1,485 ++ 🔴 155 --
+- **\#38** Dominik Klement, [4 commits](https://github.com/lhotse-speech/lhotse/commits?author=domklement) 🟩 1602 ++ 🔴 0 --
 - **\#56** Matthew Maciejewski, [1 commit](https://github.com/lhotse-speech/lhotse/commits?author=mmaciej2) 🟩 1,217 ++ 🔴 0 --
 - **\#76** Dongji Gao, [1 commit](https://github.com/lhotse-speech/lhotse/commits?author=DongjiGao) 🟩 5 ++ 🔴 3 --
 - **\#83** Henry Li Xinyuan, [1 commit](https://github.com/lhotse-speech/lhotse/commits?author=HSTEHSTEHSTE) 🟩 146 ++ 🔴 0 --
